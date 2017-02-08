@@ -39,6 +39,7 @@ static int kAlbumRowHeight = 56;
     [self addRightBarButton];
     [self setTableViewDetail];
     [self getAlbums];
+    [self.view setBackgroundColor:[UIColor blackColor]];
 }
 
 - (void)addRightBarButton {

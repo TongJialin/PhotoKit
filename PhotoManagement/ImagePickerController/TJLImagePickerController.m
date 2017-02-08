@@ -89,6 +89,31 @@ static TJLImagePickerController *helper;
     
     [vc.navigationController presentViewController:self animated:YES completion:nil];
     [self setupNavigationController];
+    
+//    //检查是否有访问权限
+//    if ([PHPhotoLibrary authorizationStatus] == PHAuthorizationStatusNotDetermined) {
+//        [PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status) {
+//            if (status == PHAuthorizationStatusAuthorized) {
+//                
+//                self.successedHandler = succeedHandler;
+//                
+//                [vc.navigationController presentViewController:self animated:YES completion:nil];
+//                [self setupNavigationController];
+//                
+//            } else {
+//                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"该应用没有访问相册的权限，您可以在设置中修改该配置" delegate:self cancelButtonTitle:@"返回" otherButtonTitles:nil, nil];
+//                [alert show];
+//            }
+//        }];
+//    } else if([PHPhotoLibrary authorizationStatus] == PHAuthorizationStatusAuthorized) {
+//        self.successedHandler = succeedHandler;
+//        
+//        [vc.navigationController presentViewController:self animated:YES completion:nil];
+//        [self setupNavigationController];
+//    } else {
+//        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"该应用没有访问相册的权限，您可以在设置中修改该配置" delegate:self cancelButtonTitle:@"返回" otherButtonTitles:nil, nil];
+//        [alert show];
+//    }
 }
 
 - (void)setupNavigationController {
