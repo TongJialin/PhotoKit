@@ -23,6 +23,9 @@
 		9258F4781E24CF34000F2007 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9258F4771E24CF34000F2007 /* ViewController.m */; };
 		9258F47D1E24CF34000F2007 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9258F47C1E24CF34000F2007 /* Assets.xcassets */; };
 		9258F4801E24CF34000F2007 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9258F47E1E24CF34000F2007 /* LaunchScreen.storyboard */; };
+		929C2A861E53F1D600622396 /* TJLActionSheet.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 929C2A851E53F1D600622396 /* TJLActionSheet.bundle */; };
+		92CF74CF1E4DA212000928D9 /* TJLCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92CF74CE1E4DA212000928D9 /* TJLCameraViewController.m */; };
+		92FE2A401E515D0F0084B5E4 /* TJLActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 92FE2A3F1E515D0F0084B5E4 /* TJLActionSheet.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +59,11 @@
 		9258F47F1E24CF34000F2007 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9258F4811E24CF34000F2007 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9258F4871E24D4E5000F2007 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		929C2A851E53F1D600622396 /* TJLActionSheet.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TJLActionSheet.bundle; sourceTree = "<group>"; };
+		92CF74CD1E4DA212000928D9 /* TJLCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJLCameraViewController.h; sourceTree = "<group>"; };
+		92CF74CE1E4DA212000928D9 /* TJLCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJLCameraViewController.m; sourceTree = "<group>"; };
+		92FE2A3E1E515D0F0084B5E4 /* TJLActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJLActionSheet.h; sourceTree = "<group>"; };
+		92FE2A3F1E515D0F0084B5E4 /* TJLActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJLActionSheet.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +96,11 @@
 				923A483F1E30BC8500F3E9A5 /* TJLGridCollectionCell.h */,
 				923A48401E30BC8500F3E9A5 /* TJLGridCollectionCell.m */,
 				923A48411E30BC8500F3E9A5 /* TJLGridCollectionCell.xib */,
+				92CF74CD1E4DA212000928D9 /* TJLCameraViewController.h */,
+				92CF74CE1E4DA212000928D9 /* TJLCameraViewController.m */,
+				92FE2A3E1E515D0F0084B5E4 /* TJLActionSheet.h */,
+				92FE2A3F1E515D0F0084B5E4 /* TJLActionSheet.m */,
+				929C2A851E53F1D600622396 /* TJLActionSheet.bundle */,
 			);
 			path = ImagePickerController;
 			sourceTree = "<group>";
@@ -171,12 +184,12 @@
 		9258F4651E24CF34000F2007 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = com.oma.matec;
 				TargetAttributes = {
 					9258F46C1E24CF34000F2007 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 2MR8GJH64K;
+						DevelopmentTeam = Q47FFAHNF9;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -207,6 +220,7 @@
 				9258F4801E24CF34000F2007 /* LaunchScreen.storyboard in Resources */,
 				9258F47D1E24CF34000F2007 /* Assets.xcassets in Resources */,
 				923A484D1E30BC8500F3E9A5 /* TJLGridCollectionCell.xib in Resources */,
+				929C2A861E53F1D600622396 /* TJLActionSheet.bundle in Resources */,
 				923A48491E30BC8500F3E9A5 /* TJLAlbumCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -223,9 +237,11 @@
 				9258F4781E24CF34000F2007 /* ViewController.m in Sources */,
 				923A484A1E30BC8500F3E9A5 /* TJLAlbumsViewController.m in Sources */,
 				923A484F1E30BC8500F3E9A5 /* TJLImagePickerController.m in Sources */,
+				92FE2A401E515D0F0084B5E4 /* TJLActionSheet.m in Sources */,
 				923A484E1E30BC8500F3E9A5 /* TJLGridViewController.m in Sources */,
 				923A48361E30BC5C00F3E9A5 /* OMABaseViewController.m in Sources */,
 				9258F4751E24CF34000F2007 /* AppDelegate.m in Sources */,
+				92CF74CF1E4DA212000928D9 /* TJLCameraViewController.m in Sources */,
 				923A48481E30BC8500F3E9A5 /* TJLAlbumCell.m in Sources */,
 				923A484B1E30BC8500F3E9A5 /* TJLBottomEditView.m in Sources */,
 				9258F4721E24CF34000F2007 /* main.m in Sources */,
@@ -265,6 +281,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -288,7 +305,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -313,6 +330,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -330,7 +348,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -341,11 +359,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 2MR8GJH64K;
+				DEVELOPMENT_TEAM = Q47FFAHNF9;
 				INFOPLIST_FILE = PhotoManagement/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.oma.matec.PhotoManagement;
+				PRODUCT_BUNDLE_IDENTIFIER = com.oma.lab.PhotoManagement;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -354,11 +372,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 2MR8GJH64K;
+				DEVELOPMENT_TEAM = Q47FFAHNF9;
 				INFOPLIST_FILE = PhotoManagement/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.oma.matec.PhotoManagement;
+				PRODUCT_BUNDLE_IDENTIFIER = com.oma.lab.PhotoManagement;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

@@ -10,10 +10,14 @@
 
 typedef void(^TJLPicPickerSuccessedHanlder)(NSArray *imageArray);
 
+typedef void(^TJLTakePhotoSuccessedHanlder)(UIImage *image);
+
 @interface TJLImagePickerController : UINavigationController
 
 + (instancetype) sharedInstance;
 
 - (void)showPickerInController:(UIViewController *)vc successBlock:(TJLPicPickerSuccessedHanlder)succeedHandler;
+
+- (void)showCameraInController:(UIViewController *)vc successBlock:(TJLTakePhotoSuccessedHanlder)succeedHandler;
 
 @end

@@ -7,8 +7,10 @@
 //
 
 #import "ViewController.h"
+#import "TJLActionSheet.h"
 #import "TJLImagePickerController.h"
 #import "TJLGridCollectionCell.h"
+#import "TJLCameraViewController.h"
 
 static NSInteger kGridItemNumberOfColumns = 4;
 static CGFloat kGridSpace = 4;
@@ -54,11 +56,24 @@ static CGSize kCollectionPhotoItemSize;
 
 - (void)buttonClicked:(UIButton *)sender {
     self.imageArray = nil;
+    
     __weak typeof(self) weakSelf = self;
-    [[TJLImagePickerController sharedInstance] showPickerInController:self successBlock:^(NSArray *imageArray) {
-        weakSelf.imageArray = imageArray;
-        [weakSelf.collectionView reloadData];
+    
+    TJLActionSheet *sheet = [[TJLActionSheet alloc] initWithTitle:nil buttonTitles:@[@"拍照", @"从相册选择"] redButtonIndex:2 clicked:^(NSInteger buttonIndex) {
+        if (buttonIndex == 0) {
+            [[TJLImagePickerController sharedInstance] showCameraInController:self successBlock:^(UIImage *image) {
+                weakSelf.imageArray = @[image];
+                [weakSelf.collectionView reloadData];
+            }];
+        } else if (buttonIndex == 1) {
+            [[TJLImagePickerController sharedInstance] showPickerInController:self successBlock:^(NSArray *imageArray) {
+                weakSelf.imageArray = imageArray;
+                [weakSelf.collectionView reloadData];
+            }];
+        }
     }];
+    [sheet show];
+    
 }
 
 - (void)setCollectionViewDetail {
