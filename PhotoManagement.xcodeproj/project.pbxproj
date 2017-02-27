@@ -23,6 +23,7 @@
 		9258F4781E24CF34000F2007 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9258F4771E24CF34000F2007 /* ViewController.m */; };
 		9258F47D1E24CF34000F2007 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9258F47C1E24CF34000F2007 /* Assets.xcassets */; };
 		9258F4801E24CF34000F2007 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9258F47E1E24CF34000F2007 /* LaunchScreen.storyboard */; };
+		928160681E5D72F2004120AF /* TJLPhotoManageTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 928160671E5D72F2004120AF /* TJLPhotoManageTypes.m */; };
 		929C2A861E53F1D600622396 /* TJLActionSheet.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 929C2A851E53F1D600622396 /* TJLActionSheet.bundle */; };
 		92CF74CF1E4DA212000928D9 /* TJLCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92CF74CE1E4DA212000928D9 /* TJLCameraViewController.m */; };
 		92FE2A401E515D0F0084B5E4 /* TJLActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 92FE2A3F1E515D0F0084B5E4 /* TJLActionSheet.m */; };
@@ -59,6 +60,8 @@
 		9258F47F1E24CF34000F2007 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9258F4811E24CF34000F2007 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9258F4871E24D4E5000F2007 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		928160661E5D72F2004120AF /* TJLPhotoManageTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJLPhotoManageTypes.h; sourceTree = "<group>"; };
+		928160671E5D72F2004120AF /* TJLPhotoManageTypes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJLPhotoManageTypes.m; sourceTree = "<group>"; };
 		929C2A851E53F1D600622396 /* TJLActionSheet.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TJLActionSheet.bundle; sourceTree = "<group>"; };
 		92CF74CD1E4DA212000928D9 /* TJLCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJLCameraViewController.h; sourceTree = "<group>"; };
 		92CF74CE1E4DA212000928D9 /* TJLCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJLCameraViewController.m; sourceTree = "<group>"; };
@@ -112,6 +115,8 @@
 				923A48331E30BC5C00F3E9A5 /* OMABaseViewController.m */,
 				923A48341E30BC5C00F3E9A5 /* UIColor+Hex.h */,
 				923A48351E30BC5C00F3E9A5 /* UIColor+Hex.m */,
+				928160661E5D72F2004120AF /* TJLPhotoManageTypes.h */,
+				928160671E5D72F2004120AF /* TJLPhotoManageTypes.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -244,6 +249,7 @@
 				92CF74CF1E4DA212000928D9 /* TJLCameraViewController.m in Sources */,
 				923A48481E30BC8500F3E9A5 /* TJLAlbumCell.m in Sources */,
 				923A484B1E30BC8500F3E9A5 /* TJLBottomEditView.m in Sources */,
+				928160681E5D72F2004120AF /* TJLPhotoManageTypes.m in Sources */,
 				9258F4721E24CF34000F2007 /* main.m in Sources */,
 				923A484C1E30BC8500F3E9A5 /* TJLGridCollectionCell.m in Sources */,
 			);

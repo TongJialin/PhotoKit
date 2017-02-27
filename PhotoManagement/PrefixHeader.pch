@@ -10,6 +10,7 @@
 #define PrefixHeader_pch
 
 #import "UIColor+Hex.h"
+#import "TJLPhotoManageTypes.h"
 
 #define WIDTH [[UIScreen mainScreen] bounds].size.width
 #define HEIGHT [[UIScreen mainScreen] bounds].size.height

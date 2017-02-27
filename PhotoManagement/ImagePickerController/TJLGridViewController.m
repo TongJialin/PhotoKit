@@ -127,6 +127,7 @@ static CGSize kCollectionPhotoItemSize;
     if (self.selectIndexArray.count == 9) {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"你最多只能选择9张照片" message:nil delegate:self cancelButtonTitle:@"我知道了" otherButtonTitles:nil, nil];
         [alert show];
+        [assetsCell reduceCheckImage];
     } else {
         
         PHAsset *asset = self.assetsFetchResults[assetsCell.tag];
@@ -187,7 +188,11 @@ static CGSize kCollectionPhotoItemSize;
     if (!_assetsFetchResults) {
         PHFetchOptions *options = [[PHFetchOptions alloc] init];
         options.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"creationDate" ascending:YES]];
-        _assetsFetchResults = [PHAsset fetchAssetsWithOptions:options];
+        if (self.type == TJLPickerTypesPhoto) {
+            _assetsFetchResults = [PHAsset fetchAssetsWithMediaType:PHAssetMediaTypeImage options:nil];
+        } else {
+            _assetsFetchResults = [PHAsset fetchAssetsWithOptions:options];
+        }
     }
     return _assetsFetchResults;
 }

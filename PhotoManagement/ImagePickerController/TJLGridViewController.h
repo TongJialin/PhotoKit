@@ -16,4 +16,6 @@
 
 @property (strong, nonatomic) PHFetchResult *assetsFetchResults;
 
+@property (nonatomic, assign) TJLPickerTypes type;
+
 @end

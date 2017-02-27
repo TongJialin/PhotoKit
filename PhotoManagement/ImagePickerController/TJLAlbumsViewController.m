@@ -38,7 +38,7 @@ static int kAlbumRowHeight = 56;
     [self setupTitle:@"照片"];
     [self addRightBarButton];
     [self setTableViewDetail];
-    [self getAlbums];
+    [self setPickerType];
     [self.view setBackgroundColor:[UIColor blackColor]];
 }
 
@@ -58,6 +58,17 @@ static int kAlbumRowHeight = 56;
     [self.tableView registerNib:[TJLAlbumCell cellNib] forCellReuseIdentifier:[TJLAlbumCell cellIdentifier]];
     [self.view addSubview:self.tableView];
     self.tableView.tableFooterView = [[UIView alloc] init];
+}
+
+- (void)setPickerType {
+    switch (self.type) {
+        case TJLPickerTypesPhoto:
+            [self getPhotos];
+            break;
+        default:
+            [self getAlbums];
+            break;
+    }
 }
 
 - (void)getAlbums {
@@ -97,6 +108,63 @@ static int kAlbumRowHeight = 56;
     }
 }
 
+- (void)getPhotos {
+    PHFetchResult *smartAlbums = [PHAssetCollection fetchAssetCollectionsWithType:PHAssetCollectionTypeSmartAlbum subtype:PHAssetCollectionSubtypeAlbumRegular options:nil];
+    
+    for (PHCollection *collection in smartAlbums) {
+        
+        if ([collection isKindOfClass:[PHAssetCollection class]]) {
+            
+            PHAssetCollection *assetCollection = (PHAssetCollection *)collection;
+            
+            switch (assetCollection.assetCollectionSubtype) {
+                    
+                case PHAssetCollectionSubtypeSmartAlbumUserLibrary: {
+                    
+                    PHFetchResult *assetsFetchResult = [PHAsset fetchAssetsInAssetCollection:assetCollection options:self.options];
+                    
+                    NSMutableArray *assetsArray = [[NSMutableArray alloc] init];
+                    for (PHAsset *asset in assetsFetchResult) {
+                        if (asset.mediaType == PHAssetMediaTypeImage) {
+                            [assetsArray addObject:asset];
+                        }
+                    }
+                    
+                    [self.smartFetchResultArray insertObject:assetsArray atIndex:0];
+                    [self.smartFetchResultTitlt insertObject:collection.localizedTitle atIndex:0];
+                    
+                }
+                    break;
+                    
+                case PHAssetCollectionSubtypeSmartAlbumFavorites:
+                case PHAssetCollectionSubtypeSmartAlbumRecentlyAdded:
+                case PHAssetCollectionSubtypeSmartAlbumSelfPortraits:
+                case PHAssetCollectionSubtypeSmartAlbumScreenshots:
+                case PHAssetCollectionSubtypeSmartAlbumBursts:
+                case PHAssetCollectionSubtypeSmartAlbumPanoramas: {
+                    
+                    PHFetchResult *assetsFetchResult = [PHAsset fetchAssetsInAssetCollection:assetCollection options:self.options];
+                    
+                    NSMutableArray *assetsArray = [[NSMutableArray alloc] init];
+                    for (PHAsset *asset in assetsFetchResult) {
+                        if (asset.mediaType == PHAssetMediaTypeImage) {
+                            [assetsArray addObject:asset];
+                        }
+                    }
+                    
+                    [self.smartFetchResultArray addObject:assetsArray];
+                    [self.smartFetchResultTitlt addObject:collection.localizedTitle];
+                    
+                }
+                    break;
+                    
+                default:
+                    break;
+            }
+        }
+    }
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
@@ -123,6 +191,7 @@ static int kAlbumRowHeight = 56;
     TJLAlbumCell *cell = [tableView dequeueReusableCellWithIdentifier:[TJLAlbumCell cellIdentifier] forIndexPath:indexPath];
     
     PHFetchResult *fetchResult = self.smartFetchResultArray[indexPath.row];
+    
     cell.countLabel.text = [NSString stringWithFormat:@"（%lu）",(unsigned long)fetchResult.count];
     
     if (fetchResult.count > 0) {

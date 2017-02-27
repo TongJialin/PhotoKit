@@ -26,6 +26,8 @@
  */
 @property (nonatomic, strong) TJLTakePhotoSuccessedHanlder takePhotoSuccessedHandler;
 
+@property (strong, nonatomic) TJLPickerSuccessedHanlder videoPicsuccessedHandler;
+
 @end
 
 @implementation TJLImagePickerController
@@ -76,15 +78,50 @@ static TJLImagePickerController *helper;
     PHImageRequestOptions *options = [[PHImageRequestOptions alloc] init];
     options.synchronous = YES;
     options.deliveryMode = PHImageRequestOptionsDeliveryModeFastFormat;
+    
+    NSMutableArray *videoArray = [NSMutableArray new];
     for (PHAsset *asset in assetsArray) {
-        [[PHCachingImageManager defaultManager] requestImageForAsset:asset targetSize:PHImageManagerMaximumSize contentMode:PHImageContentModeDefault options:options resultHandler:^(UIImage * _Nullable result, NSDictionary * _Nullable info) {
-            [weakSelf.imageArray addObject:result];
-        }];
+        
+        if (asset.mediaType == PHAssetMediaTypeImage) {
+            [[PHCachingImageManager defaultManager] requestImageForAsset:asset targetSize:CGSizeMake(WIDTH, HEIGHT) contentMode:PHImageContentModeDefault options:options resultHandler:^(UIImage * _Nullable result, NSDictionary * _Nullable info) {
+                [weakSelf.imageArray addObject:result];
+            }];
+        } else if (asset.mediaType == PHAssetMediaTypeVideo) {
+            
+            [[PHCachingImageManager defaultManager] requestImageForAsset:asset targetSize:CGSizeMake(WIDTH, HEIGHT) contentMode:PHImageContentModeDefault options:options resultHandler:^(UIImage * _Nullable result, NSDictionary * _Nullable info) {
+                if (result) {
+                    [weakSelf.imageArray addObject:result];
+                }
+            }];
+            
+            [videoArray addObject:asset];
+            
+//            [[PHCachingImageManager defaultManager] requestAVAssetForVideo:asset options:nil resultHandler:^(AVAsset * _Nullable asset, AVAudioMix * _Nullable audioMix, NSDictionary * _Nullable info) {
+//                AVAssetImageGenerator *gen = [[AVAssetImageGenerator alloc] initWithAsset:asset];
+//                
+//                gen.appliesPreferredTrackTransform = YES;
+//                CMTime time = CMTimeMakeWithSeconds(0.0, 600);
+//                NSError *error = nil;
+//                CMTime actualTime;
+//                CGImageRef image = [gen copyCGImageAtTime:time actualTime:&actualTime error:&error];
+//                UIImage *thumb = [[UIImage alloc] initWithCGImage:image];
+//                [weakSelf.imageArray addObject:thumb];
+//                CGImageRelease(image);
+//                
+//            }];
+        }
     }
     
-    if (self.successedHandler) {
-        self.successedHandler(self.imageArray);
+    if (videoArray.count > 0) {
+        if (self.videoPicsuccessedHandler) {
+            self.videoPicsuccessedHandler(self.imageArray,videoArray);
+        }
+    } else {
+        if (self.successedHandler) {
+            self.successedHandler(self.imageArray);
+        }
     }
+    
 }
 
 - (void)takePhotoNotification:(NSNotification *)notification {
@@ -111,8 +148,10 @@ static TJLImagePickerController *helper;
     self.successedHandler = succeedHandler;
     
     [vc.navigationController presentViewController:self animated:YES completion:nil];
-    [self setupNavigationController];
+    [self setupNavigationController:TJLPickerTypesPhoto];
 }
+
+#pragma mark --- 获取拍照图片的方法
 
 - (void)showCameraInController:(UIViewController *)vc successBlock:(TJLTakePhotoSuccessedHanlder)succeedHandler {
     
@@ -124,9 +163,21 @@ static TJLImagePickerController *helper;
     [self setViewControllers:@[cameraViewController]];
 }
 
-- (void)setupNavigationController {
+#pragma mark --- 获取图片和视频资源的方法
+
+- (void)showAllPickerInController:(UIViewController *)vc successBlock:(TJLPickerSuccessedHanlder)succeedHandler {
+    
+    self.videoPicsuccessedHandler = succeedHandler;
+    
+    [vc.navigationController presentViewController:self animated:YES completion:nil];
+    [self setupNavigationController:TJLPickerTypesAll];
+}
+
+- (void)setupNavigationController:(TJLPickerTypes)type {
     TJLAlbumsViewController *albumsViewController = [[TJLAlbumsViewController alloc] init];
+    albumsViewController.type = type;
     TJLGridViewController *gridViewController = [[TJLGridViewController alloc] init];
+    gridViewController.type = type;
     [self setViewControllers:@[albumsViewController, gridViewController]];
 }
 

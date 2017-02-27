@@ -11,4 +11,6 @@
 
 @interface TJLAlbumsViewController : OMABaseViewController
 
+@property (nonatomic, assign) TJLPickerTypes type;
+
 @end

@@ -59,7 +59,7 @@ static CGSize kCollectionPhotoItemSize;
     
     __weak typeof(self) weakSelf = self;
     
-    TJLActionSheet *sheet = [[TJLActionSheet alloc] initWithTitle:nil buttonTitles:@[@"拍照", @"从相册选择"] redButtonIndex:2 clicked:^(NSInteger buttonIndex) {
+    TJLActionSheet *sheet = [[TJLActionSheet alloc] initWithTitle:nil buttonTitles:@[@"拍照", @"从相册选择（仅图片）" ,@"从相册选择（包含视频和图片）"] redButtonIndex:3 clicked:^(NSInteger buttonIndex) {
         if (buttonIndex == 0) {
             [[TJLImagePickerController sharedInstance] showCameraInController:self successBlock:^(UIImage *image) {
                 weakSelf.imageArray = @[image];
@@ -67,6 +67,11 @@ static CGSize kCollectionPhotoItemSize;
             }];
         } else if (buttonIndex == 1) {
             [[TJLImagePickerController sharedInstance] showPickerInController:self successBlock:^(NSArray *imageArray) {
+                weakSelf.imageArray = imageArray;
+                [weakSelf.collectionView reloadData];
+            }];
+        } else if (buttonIndex == 2) {
+            [[TJLImagePickerController sharedInstance] showAllPickerInController:self successBlock:^(NSArray *imageArray, NSArray *videoArray) {
                 weakSelf.imageArray = imageArray;
                 [weakSelf.collectionView reloadData];
             }];
