@@ -26,7 +26,7 @@
  */
 @property (nonatomic, strong) TJLTakePhotoSuccessedHanlder takePhotoSuccessedHandler;
 
-@property (strong, nonatomic) TJLPickerSuccessedHanlder videoPicsuccessedHandler;
+@property (strong, nonatomic) TJLPickerSuccessedHanlder videoPicSuccessedHandler;
 
 @end
 
@@ -113,8 +113,8 @@ static TJLImagePickerController *helper;
     }
     
     if (videoArray.count > 0) {
-        if (self.videoPicsuccessedHandler) {
-            self.videoPicsuccessedHandler(self.imageArray,videoArray);
+        if (self.videoPicSuccessedHandler) {
+            self.videoPicSuccessedHandler(self.imageArray,videoArray);
         }
     } else {
         if (self.successedHandler) {
@@ -145,32 +145,67 @@ static TJLImagePickerController *helper;
 
 - (void)showPickerInController:(UIViewController *)vc successBlock:(TJLPicPickerSuccessedHanlder)succeedHandler {
     
-    self.successedHandler = succeedHandler;
-    
-    [vc.navigationController presentViewController:self animated:YES completion:nil];
-    [self setupNavigationController:TJLPickerTypesPhoto];
+    //检查是否有相册访问权限
+    switch ([PHPhotoLibrary authorizationStatus]) {
+        case PHAuthorizationStatusNotDetermined:
+        {
+            [PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status) {
+                dispatch_sync(dispatch_get_main_queue(), ^{
+                    if (status == PHAuthorizationStatusAuthorized) {
+                        
+                        self.successedHandler = succeedHandler;
+                        
+                        [self setupPickerNavigationController:vc type:TJLPickerTypesPhoto];
+                        
+                    } else {
+                        [self photoAlertView];
+                    }
+                });
+            }];
+        }
+            break;
+        case PHAuthorizationStatusAuthorized:
+        {
+            self.successedHandler = succeedHandler;
+            
+            [self setupPickerNavigationController:vc type:TJLPickerTypesPhoto];
+        }
+            break;
+            
+        default:
+            [self photoAlertView];
+            break;
+    }
 }
 
 #pragma mark --- 获取拍照图片的方法
 
 - (void)showCameraInController:(UIViewController *)vc successBlock:(TJLTakePhotoSuccessedHanlder)succeedHandler {
     
-    self.takePhotoSuccessedHandler = succeedHandler;
-    
-    [vc.navigationController presentViewController:self animated:YES completion:nil];
-    
-    TJLCameraViewController *cameraViewController = [[TJLCameraViewController alloc] init];
-    [self setViewControllers:@[cameraViewController]];
+    //检查是否有相机访问权限
+    switch ([AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo]) {
+        case AVAuthorizationStatusNotDetermined:
+        case AVAuthorizationStatusAuthorized:
+        {
+            self.takePhotoSuccessedHandler = succeedHandler;
+            
+            [self setupCameraNavigationController:vc];
+        }
+            break;
+            
+        default:
+            [self cameraAlertView];
+            break;
+    }
 }
 
 #pragma mark --- 获取图片和视频资源的方法
 
 - (void)showAllPickerInController:(UIViewController *)vc successBlock:(TJLPickerSuccessedHanlder)succeedHandler {
     
-    self.videoPicsuccessedHandler = succeedHandler;
+    self.videoPicSuccessedHandler = succeedHandler;
     
-    [vc.navigationController presentViewController:self animated:YES completion:nil];
-    [self setupNavigationController:TJLPickerTypesAll];
+    [self setupPickerNavigationController:vc type:TJLPickerTypesAll];
 }
 
 - (void)setupNavigationController:(TJLPickerTypes)type {
@@ -179,6 +214,35 @@ static TJLImagePickerController *helper;
     TJLGridViewController *gridViewController = [[TJLGridViewController alloc] init];
     gridViewController.type = type;
     [self setViewControllers:@[albumsViewController, gridViewController]];
+}
+
+- (void)setupPickerNavigationController:(UIViewController *)vc type:(TJLPickerTypes)type {
+    
+    [vc.navigationController presentViewController:self animated:YES completion:nil];
+    
+    TJLAlbumsViewController *albumsViewController = [[TJLAlbumsViewController alloc] init];
+    albumsViewController.type = type;
+    TJLGridViewController *gridViewController = [[TJLGridViewController alloc] init];
+    gridViewController.type = type;
+    [self setViewControllers:@[albumsViewController, gridViewController]];
+}
+
+- (void)setupCameraNavigationController:(UIViewController *)vc {
+    
+    [vc.navigationController presentViewController:self animated:YES completion:nil];
+    
+    TJLCameraViewController *cameraViewController = [[TJLCameraViewController alloc] init];
+    [self setViewControllers:@[cameraViewController]];
+}
+
+- (void)photoAlertView {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"该应用没有访问相册的权限，您可以在设置中修改该配置" delegate:self cancelButtonTitle:@"返回" otherButtonTitles:nil, nil];
+    [alert show];
+}
+
+- (void)cameraAlertView {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"该应用没有访问相机的权限，您可以在设置中修改该配置" delegate:self cancelButtonTitle:@"返回" otherButtonTitles:nil, nil];
+    [alert show];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -193,32 +257,5 @@ static TJLImagePickerController *helper;
     }
     return _imageArray;
 }
-
-//- (void)checkAuthorizationStatus {
-    //    //检查是否有访问权限
-    //    if ([PHPhotoLibrary authorizationStatus] == PHAuthorizationStatusNotDetermined) {
-    //        [PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status) {
-    //            if (status == PHAuthorizationStatusAuthorized) {
-    //
-    //                self.successedHandler = succeedHandler;
-    //
-    //                [vc.navigationController presentViewController:self animated:YES completion:nil];
-    //                [self setupNavigationController];
-    //
-    //            } else {
-    //                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"该应用没有访问相册的权限，您可以在设置中修改该配置" delegate:self cancelButtonTitle:@"返回" otherButtonTitles:nil, nil];
-    //                [alert show];
-    //            }
-    //        }];
-    //    } else if([PHPhotoLibrary authorizationStatus] == PHAuthorizationStatusAuthorized) {
-    //        self.successedHandler = succeedHandler;
-    //
-    //        [vc.navigationController presentViewController:self animated:YES completion:nil];
-    //        [self setupNavigationController];
-    //    } else {
-    //        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"该应用没有访问相册的权限，您可以在设置中修改该配置" delegate:self cancelButtonTitle:@"返回" otherButtonTitles:nil, nil];
-    //        [alert show];
-    //    }
-//}
 
 @end
