@@ -7,49 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		923A48361E30BC5C00F3E9A5 /* OMABaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 923A48331E30BC5C00F3E9A5 /* OMABaseViewController.m */; };
-		923A48371E30BC5C00F3E9A5 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 923A48351E30BC5C00F3E9A5 /* UIColor+Hex.m */; };
-		923A48481E30BC8500F3E9A5 /* TJLAlbumCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 923A48391E30BC8500F3E9A5 /* TJLAlbumCell.m */; };
-		923A48491E30BC8500F3E9A5 /* TJLAlbumCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 923A483A1E30BC8500F3E9A5 /* TJLAlbumCell.xib */; };
-		923A484A1E30BC8500F3E9A5 /* TJLAlbumsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 923A483C1E30BC8500F3E9A5 /* TJLAlbumsViewController.m */; };
-		923A484B1E30BC8500F3E9A5 /* TJLBottomEditView.m in Sources */ = {isa = PBXBuildFile; fileRef = 923A483E1E30BC8500F3E9A5 /* TJLBottomEditView.m */; };
-		923A484C1E30BC8500F3E9A5 /* TJLGridCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 923A48401E30BC8500F3E9A5 /* TJLGridCollectionCell.m */; };
-		923A484D1E30BC8500F3E9A5 /* TJLGridCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 923A48411E30BC8500F3E9A5 /* TJLGridCollectionCell.xib */; };
-		923A484E1E30BC8500F3E9A5 /* TJLGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 923A48431E30BC8500F3E9A5 /* TJLGridViewController.m */; };
-		923A484F1E30BC8500F3E9A5 /* TJLImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 923A48451E30BC8500F3E9A5 /* TJLImagePickerController.m */; };
-		923A48501E30BC8500F3E9A5 /* TJLPreviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 923A48471E30BC8500F3E9A5 /* TJLPreviewViewController.m */; };
 		9258F4721E24CF34000F2007 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9258F4711E24CF34000F2007 /* main.m */; };
 		9258F4751E24CF34000F2007 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9258F4741E24CF34000F2007 /* AppDelegate.m */; };
 		9258F4781E24CF34000F2007 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9258F4771E24CF34000F2007 /* ViewController.m */; };
 		9258F47D1E24CF34000F2007 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9258F47C1E24CF34000F2007 /* Assets.xcassets */; };
 		9258F4801E24CF34000F2007 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9258F47E1E24CF34000F2007 /* LaunchScreen.storyboard */; };
-		928160681E5D72F2004120AF /* TJLPhotoManageTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 928160671E5D72F2004120AF /* TJLPhotoManageTypes.m */; };
-		929C2A861E53F1D600622396 /* TJLActionSheet.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 929C2A851E53F1D600622396 /* TJLActionSheet.bundle */; };
-		92CF74CF1E4DA212000928D9 /* TJLCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92CF74CE1E4DA212000928D9 /* TJLCameraViewController.m */; };
-		92FE2A401E515D0F0084B5E4 /* TJLActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 92FE2A3F1E515D0F0084B5E4 /* TJLActionSheet.m */; };
+		929341D61E8E3D0000ED6378 /* PhotoManagement.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 929341D51E8E3D0000ED6378 /* PhotoManagement.podspec */; };
+		929341F51E8E3DD800ED6378 /* OMABaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 929341DA1E8E3DD800ED6378 /* OMABaseViewController.m */; };
+		929341F61E8E3DD800ED6378 /* TJLPhotoManageTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 929341DC1E8E3DD800ED6378 /* TJLPhotoManageTypes.m */; };
+		929341F71E8E3DD800ED6378 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 929341DE1E8E3DD800ED6378 /* UIColor+Hex.m */; };
+		929341F81E8E3DD800ED6378 /* TJLActionSheet.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 929341E01E8E3DD800ED6378 /* TJLActionSheet.bundle */; };
+		929341F91E8E3DD800ED6378 /* TJLActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 929341E21E8E3DD800ED6378 /* TJLActionSheet.m */; };
+		929341FA1E8E3DD800ED6378 /* TJLAlbumCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 929341E41E8E3DD800ED6378 /* TJLAlbumCell.m */; };
+		929341FB1E8E3DD800ED6378 /* TJLAlbumCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 929341E51E8E3DD800ED6378 /* TJLAlbumCell.xib */; };
+		929341FC1E8E3DD800ED6378 /* TJLAlbumsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 929341E71E8E3DD800ED6378 /* TJLAlbumsViewController.m */; };
+		929341FD1E8E3DD800ED6378 /* TJLBottomEditView.m in Sources */ = {isa = PBXBuildFile; fileRef = 929341E91E8E3DD800ED6378 /* TJLBottomEditView.m */; };
+		929341FE1E8E3DD800ED6378 /* TJLCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 929341EB1E8E3DD800ED6378 /* TJLCameraViewController.m */; };
+		929341FF1E8E3DD800ED6378 /* TJLGridCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 929341ED1E8E3DD800ED6378 /* TJLGridCollectionCell.m */; };
+		929342001E8E3DD800ED6378 /* TJLGridCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 929341EE1E8E3DD800ED6378 /* TJLGridCollectionCell.xib */; };
+		929342011E8E3DD800ED6378 /* TJLGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 929341F01E8E3DD800ED6378 /* TJLGridViewController.m */; };
+		929342021E8E3DD800ED6378 /* TJLImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 929341F21E8E3DD800ED6378 /* TJLImagePickerController.m */; };
+		929342031E8E3DD800ED6378 /* TJLPreviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 929341F41E8E3DD800ED6378 /* TJLPreviewViewController.m */; };
+		929342061E8E3E5200ED6378 /* ass.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 929342051E8E3E5200ED6378 /* ass.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		923A48321E30BC5C00F3E9A5 /* OMABaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OMABaseViewController.h; sourceTree = "<group>"; };
-		923A48331E30BC5C00F3E9A5 /* OMABaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OMABaseViewController.m; sourceTree = "<group>"; };
-		923A48341E30BC5C00F3E9A5 /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
-		923A48351E30BC5C00F3E9A5 /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
-		923A48381E30BC8500F3E9A5 /* TJLAlbumCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJLAlbumCell.h; sourceTree = "<group>"; };
-		923A48391E30BC8500F3E9A5 /* TJLAlbumCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJLAlbumCell.m; sourceTree = "<group>"; };
-		923A483A1E30BC8500F3E9A5 /* TJLAlbumCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TJLAlbumCell.xib; sourceTree = "<group>"; };
-		923A483B1E30BC8500F3E9A5 /* TJLAlbumsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJLAlbumsViewController.h; sourceTree = "<group>"; };
-		923A483C1E30BC8500F3E9A5 /* TJLAlbumsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJLAlbumsViewController.m; sourceTree = "<group>"; };
-		923A483D1E30BC8500F3E9A5 /* TJLBottomEditView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJLBottomEditView.h; sourceTree = "<group>"; };
-		923A483E1E30BC8500F3E9A5 /* TJLBottomEditView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJLBottomEditView.m; sourceTree = "<group>"; };
-		923A483F1E30BC8500F3E9A5 /* TJLGridCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJLGridCollectionCell.h; sourceTree = "<group>"; };
-		923A48401E30BC8500F3E9A5 /* TJLGridCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJLGridCollectionCell.m; sourceTree = "<group>"; };
-		923A48411E30BC8500F3E9A5 /* TJLGridCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TJLGridCollectionCell.xib; sourceTree = "<group>"; };
-		923A48421E30BC8500F3E9A5 /* TJLGridViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJLGridViewController.h; sourceTree = "<group>"; };
-		923A48431E30BC8500F3E9A5 /* TJLGridViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJLGridViewController.m; sourceTree = "<group>"; };
-		923A48441E30BC8500F3E9A5 /* TJLImagePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJLImagePickerController.h; sourceTree = "<group>"; };
-		923A48451E30BC8500F3E9A5 /* TJLImagePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJLImagePickerController.m; sourceTree = "<group>"; };
-		923A48461E30BC8500F3E9A5 /* TJLPreviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJLPreviewViewController.h; sourceTree = "<group>"; };
-		923A48471E30BC8500F3E9A5 /* TJLPreviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJLPreviewViewController.m; sourceTree = "<group>"; };
 		9258F46D1E24CF34000F2007 /* PhotoManagement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoManagement.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9258F4711E24CF34000F2007 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9258F4731E24CF34000F2007 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -60,13 +42,35 @@
 		9258F47F1E24CF34000F2007 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9258F4811E24CF34000F2007 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9258F4871E24D4E5000F2007 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		928160661E5D72F2004120AF /* TJLPhotoManageTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJLPhotoManageTypes.h; sourceTree = "<group>"; };
-		928160671E5D72F2004120AF /* TJLPhotoManageTypes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJLPhotoManageTypes.m; sourceTree = "<group>"; };
-		929C2A851E53F1D600622396 /* TJLActionSheet.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TJLActionSheet.bundle; sourceTree = "<group>"; };
-		92CF74CD1E4DA212000928D9 /* TJLCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJLCameraViewController.h; sourceTree = "<group>"; };
-		92CF74CE1E4DA212000928D9 /* TJLCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJLCameraViewController.m; sourceTree = "<group>"; };
-		92FE2A3E1E515D0F0084B5E4 /* TJLActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJLActionSheet.h; sourceTree = "<group>"; };
-		92FE2A3F1E515D0F0084B5E4 /* TJLActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJLActionSheet.m; sourceTree = "<group>"; };
+		929341D51E8E3D0000ED6378 /* PhotoManagement.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; path = PhotoManagement.podspec; sourceTree = "<group>"; };
+		929341D91E8E3DD800ED6378 /* OMABaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OMABaseViewController.h; sourceTree = "<group>"; };
+		929341DA1E8E3DD800ED6378 /* OMABaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OMABaseViewController.m; sourceTree = "<group>"; };
+		929341DB1E8E3DD800ED6378 /* TJLPhotoManageTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJLPhotoManageTypes.h; sourceTree = "<group>"; };
+		929341DC1E8E3DD800ED6378 /* TJLPhotoManageTypes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJLPhotoManageTypes.m; sourceTree = "<group>"; };
+		929341DD1E8E3DD800ED6378 /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
+		929341DE1E8E3DD800ED6378 /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
+		929341E01E8E3DD800ED6378 /* TJLActionSheet.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TJLActionSheet.bundle; sourceTree = "<group>"; };
+		929341E11E8E3DD800ED6378 /* TJLActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJLActionSheet.h; sourceTree = "<group>"; };
+		929341E21E8E3DD800ED6378 /* TJLActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJLActionSheet.m; sourceTree = "<group>"; };
+		929341E31E8E3DD800ED6378 /* TJLAlbumCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJLAlbumCell.h; sourceTree = "<group>"; };
+		929341E41E8E3DD800ED6378 /* TJLAlbumCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJLAlbumCell.m; sourceTree = "<group>"; };
+		929341E51E8E3DD800ED6378 /* TJLAlbumCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TJLAlbumCell.xib; sourceTree = "<group>"; };
+		929341E61E8E3DD800ED6378 /* TJLAlbumsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJLAlbumsViewController.h; sourceTree = "<group>"; };
+		929341E71E8E3DD800ED6378 /* TJLAlbumsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJLAlbumsViewController.m; sourceTree = "<group>"; };
+		929341E81E8E3DD800ED6378 /* TJLBottomEditView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJLBottomEditView.h; sourceTree = "<group>"; };
+		929341E91E8E3DD800ED6378 /* TJLBottomEditView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJLBottomEditView.m; sourceTree = "<group>"; };
+		929341EA1E8E3DD800ED6378 /* TJLCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJLCameraViewController.h; sourceTree = "<group>"; };
+		929341EB1E8E3DD800ED6378 /* TJLCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJLCameraViewController.m; sourceTree = "<group>"; };
+		929341EC1E8E3DD800ED6378 /* TJLGridCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJLGridCollectionCell.h; sourceTree = "<group>"; };
+		929341ED1E8E3DD800ED6378 /* TJLGridCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJLGridCollectionCell.m; sourceTree = "<group>"; };
+		929341EE1E8E3DD800ED6378 /* TJLGridCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TJLGridCollectionCell.xib; sourceTree = "<group>"; };
+		929341EF1E8E3DD800ED6378 /* TJLGridViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJLGridViewController.h; sourceTree = "<group>"; };
+		929341F01E8E3DD800ED6378 /* TJLGridViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJLGridViewController.m; sourceTree = "<group>"; };
+		929341F11E8E3DD800ED6378 /* TJLImagePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJLImagePickerController.h; sourceTree = "<group>"; };
+		929341F21E8E3DD800ED6378 /* TJLImagePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJLImagePickerController.m; sourceTree = "<group>"; };
+		929341F31E8E3DD800ED6378 /* TJLPreviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJLPreviewViewController.h; sourceTree = "<group>"; };
+		929341F41E8E3DD800ED6378 /* TJLPreviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJLPreviewViewController.m; sourceTree = "<group>"; };
+		929342051E8E3E5200ED6378 /* ass.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ass.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,50 +84,10 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		923A48301E30BBDF00F3E9A5 /* ImagePickerController */ = {
-			isa = PBXGroup;
-			children = (
-				923A48441E30BC8500F3E9A5 /* TJLImagePickerController.h */,
-				923A48451E30BC8500F3E9A5 /* TJLImagePickerController.m */,
-				923A483B1E30BC8500F3E9A5 /* TJLAlbumsViewController.h */,
-				923A483C1E30BC8500F3E9A5 /* TJLAlbumsViewController.m */,
-				923A48421E30BC8500F3E9A5 /* TJLGridViewController.h */,
-				923A48431E30BC8500F3E9A5 /* TJLGridViewController.m */,
-				923A48461E30BC8500F3E9A5 /* TJLPreviewViewController.h */,
-				923A48471E30BC8500F3E9A5 /* TJLPreviewViewController.m */,
-				923A483D1E30BC8500F3E9A5 /* TJLBottomEditView.h */,
-				923A483E1E30BC8500F3E9A5 /* TJLBottomEditView.m */,
-				923A48381E30BC8500F3E9A5 /* TJLAlbumCell.h */,
-				923A48391E30BC8500F3E9A5 /* TJLAlbumCell.m */,
-				923A483A1E30BC8500F3E9A5 /* TJLAlbumCell.xib */,
-				923A483F1E30BC8500F3E9A5 /* TJLGridCollectionCell.h */,
-				923A48401E30BC8500F3E9A5 /* TJLGridCollectionCell.m */,
-				923A48411E30BC8500F3E9A5 /* TJLGridCollectionCell.xib */,
-				92CF74CD1E4DA212000928D9 /* TJLCameraViewController.h */,
-				92CF74CE1E4DA212000928D9 /* TJLCameraViewController.m */,
-				92FE2A3E1E515D0F0084B5E4 /* TJLActionSheet.h */,
-				92FE2A3F1E515D0F0084B5E4 /* TJLActionSheet.m */,
-				929C2A851E53F1D600622396 /* TJLActionSheet.bundle */,
-			);
-			path = ImagePickerController;
-			sourceTree = "<group>";
-		};
-		923A48311E30BBFF00F3E9A5 /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				923A48321E30BC5C00F3E9A5 /* OMABaseViewController.h */,
-				923A48331E30BC5C00F3E9A5 /* OMABaseViewController.m */,
-				923A48341E30BC5C00F3E9A5 /* UIColor+Hex.h */,
-				923A48351E30BC5C00F3E9A5 /* UIColor+Hex.m */,
-				928160661E5D72F2004120AF /* TJLPhotoManageTypes.h */,
-				928160671E5D72F2004120AF /* TJLPhotoManageTypes.m */,
-			);
-			path = Common;
-			sourceTree = "<group>";
-		};
 		9258F4641E24CF34000F2007 = {
 			isa = PBXGroup;
 			children = (
+				929341D51E8E3D0000ED6378 /* PhotoManagement.podspec */,
 				9258F46F1E24CF34000F2007 /* PhotoManagement */,
 				9258F46E1E24CF34000F2007 /* Products */,
 			);
@@ -140,8 +104,8 @@
 		9258F46F1E24CF34000F2007 /* PhotoManagement */ = {
 			isa = PBXGroup;
 			children = (
-				923A48311E30BBFF00F3E9A5 /* Common */,
-				923A48301E30BBDF00F3E9A5 /* ImagePickerController */,
+				929342041E8E3E5200ED6378 /* Assets */,
+				929341D71E8E3DD800ED6378 /* Classes */,
 				9258F4731E24CF34000F2007 /* AppDelegate.h */,
 				9258F4741E24CF34000F2007 /* AppDelegate.m */,
 				9258F4761E24CF34000F2007 /* ViewController.h */,
@@ -161,6 +125,64 @@
 				9258F4871E24D4E5000F2007 /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		929341D71E8E3DD800ED6378 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				929341D81E8E3DD800ED6378 /* Common */,
+				929341DF1E8E3DD800ED6378 /* ImagePickerController */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		929341D81E8E3DD800ED6378 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				929341D91E8E3DD800ED6378 /* OMABaseViewController.h */,
+				929341DA1E8E3DD800ED6378 /* OMABaseViewController.m */,
+				929341DB1E8E3DD800ED6378 /* TJLPhotoManageTypes.h */,
+				929341DC1E8E3DD800ED6378 /* TJLPhotoManageTypes.m */,
+				929341DD1E8E3DD800ED6378 /* UIColor+Hex.h */,
+				929341DE1E8E3DD800ED6378 /* UIColor+Hex.m */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		929341DF1E8E3DD800ED6378 /* ImagePickerController */ = {
+			isa = PBXGroup;
+			children = (
+				929341E01E8E3DD800ED6378 /* TJLActionSheet.bundle */,
+				929341E11E8E3DD800ED6378 /* TJLActionSheet.h */,
+				929341E21E8E3DD800ED6378 /* TJLActionSheet.m */,
+				929341E31E8E3DD800ED6378 /* TJLAlbumCell.h */,
+				929341E41E8E3DD800ED6378 /* TJLAlbumCell.m */,
+				929341E51E8E3DD800ED6378 /* TJLAlbumCell.xib */,
+				929341E61E8E3DD800ED6378 /* TJLAlbumsViewController.h */,
+				929341E71E8E3DD800ED6378 /* TJLAlbumsViewController.m */,
+				929341E81E8E3DD800ED6378 /* TJLBottomEditView.h */,
+				929341E91E8E3DD800ED6378 /* TJLBottomEditView.m */,
+				929341EA1E8E3DD800ED6378 /* TJLCameraViewController.h */,
+				929341EB1E8E3DD800ED6378 /* TJLCameraViewController.m */,
+				929341EC1E8E3DD800ED6378 /* TJLGridCollectionCell.h */,
+				929341ED1E8E3DD800ED6378 /* TJLGridCollectionCell.m */,
+				929341EE1E8E3DD800ED6378 /* TJLGridCollectionCell.xib */,
+				929341EF1E8E3DD800ED6378 /* TJLGridViewController.h */,
+				929341F01E8E3DD800ED6378 /* TJLGridViewController.m */,
+				929341F11E8E3DD800ED6378 /* TJLImagePickerController.h */,
+				929341F21E8E3DD800ED6378 /* TJLImagePickerController.m */,
+				929341F31E8E3DD800ED6378 /* TJLPreviewViewController.h */,
+				929341F41E8E3DD800ED6378 /* TJLPreviewViewController.m */,
+			);
+			path = ImagePickerController;
+			sourceTree = "<group>";
+		};
+		929342041E8E3E5200ED6378 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				929342051E8E3E5200ED6378 /* ass.bundle */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,11 +244,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				929341FB1E8E3DD800ED6378 /* TJLAlbumCell.xib in Resources */,
+				929342061E8E3E5200ED6378 /* ass.bundle in Resources */,
 				9258F4801E24CF34000F2007 /* LaunchScreen.storyboard in Resources */,
 				9258F47D1E24CF34000F2007 /* Assets.xcassets in Resources */,
-				923A484D1E30BC8500F3E9A5 /* TJLGridCollectionCell.xib in Resources */,
-				929C2A861E53F1D600622396 /* TJLActionSheet.bundle in Resources */,
-				923A48491E30BC8500F3E9A5 /* TJLAlbumCell.xib in Resources */,
+				929341F81E8E3DD800ED6378 /* TJLActionSheet.bundle in Resources */,
+				929342001E8E3DD800ED6378 /* TJLGridCollectionCell.xib in Resources */,
+				929341D61E8E3D0000ED6378 /* PhotoManagement.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,21 +261,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				923A48501E30BC8500F3E9A5 /* TJLPreviewViewController.m in Sources */,
-				923A48371E30BC5C00F3E9A5 /* UIColor+Hex.m in Sources */,
+				929342031E8E3DD800ED6378 /* TJLPreviewViewController.m in Sources */,
 				9258F4781E24CF34000F2007 /* ViewController.m in Sources */,
-				923A484A1E30BC8500F3E9A5 /* TJLAlbumsViewController.m in Sources */,
-				923A484F1E30BC8500F3E9A5 /* TJLImagePickerController.m in Sources */,
-				92FE2A401E515D0F0084B5E4 /* TJLActionSheet.m in Sources */,
-				923A484E1E30BC8500F3E9A5 /* TJLGridViewController.m in Sources */,
-				923A48361E30BC5C00F3E9A5 /* OMABaseViewController.m in Sources */,
+				929341F91E8E3DD800ED6378 /* TJLActionSheet.m in Sources */,
+				929342021E8E3DD800ED6378 /* TJLImagePickerController.m in Sources */,
+				929341FF1E8E3DD800ED6378 /* TJLGridCollectionCell.m in Sources */,
+				929341FD1E8E3DD800ED6378 /* TJLBottomEditView.m in Sources */,
+				929341F71E8E3DD800ED6378 /* UIColor+Hex.m in Sources */,
+				929341F51E8E3DD800ED6378 /* OMABaseViewController.m in Sources */,
+				929341FA1E8E3DD800ED6378 /* TJLAlbumCell.m in Sources */,
+				929341FC1E8E3DD800ED6378 /* TJLAlbumsViewController.m in Sources */,
+				929341F61E8E3DD800ED6378 /* TJLPhotoManageTypes.m in Sources */,
+				929341FE1E8E3DD800ED6378 /* TJLCameraViewController.m in Sources */,
+				929342011E8E3DD800ED6378 /* TJLGridViewController.m in Sources */,
 				9258F4751E24CF34000F2007 /* AppDelegate.m in Sources */,
-				92CF74CF1E4DA212000928D9 /* TJLCameraViewController.m in Sources */,
-				923A48481E30BC8500F3E9A5 /* TJLAlbumCell.m in Sources */,
-				923A484B1E30BC8500F3E9A5 /* TJLBottomEditView.m in Sources */,
-				928160681E5D72F2004120AF /* TJLPhotoManageTypes.m in Sources */,
 				9258F4721E24CF34000F2007 /* main.m in Sources */,
-				923A484C1E30BC8500F3E9A5 /* TJLGridCollectionCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
